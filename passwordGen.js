@@ -3,7 +3,6 @@ const generateBtn = document.querySelector("#generate");
 const lengthSlider = document.getElementById('rangeOfCharacters');
 const lengthInput = document.getElementById('characterAmountNumber');
 const passwordText = document.querySelector("#password");
-const generateButton = document.querySelector("#generate");
 const clipboardButton = document.querySelector("#clipboard");
 const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numbers = "0123456789";
