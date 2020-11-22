@@ -74,6 +74,14 @@ function handleLengthInputChanged(event) {
     lengthSlider.value = event.target.value;
 }
 
+function handleCopyToClipboard() {
+    document.querySelector("#password").select();
+    document.execCommand("copy");
+}
+
+// add event listener for copying to clipboard
+clipboardButton.addEventListener('click', handleCopyToClipboard);
+
 // Add event listener to watch slider change to keep value in sync
 lengthSlider.addEventListener('change', handleLengthSliderChanged);
 
