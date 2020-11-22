@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="wrapper"></div>
-      <header>
+    <link rel="stylesheet" href="passwordGen.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <header>
         <h1>Password Generator</h1>
-      </header>
-      <div class="card">
+    </header>
+    <div class="card">
         <div class="card-header">
-          <h2>Generate a Password</h2>
+            <h2>Generate a Password</h2>
         </div>
         <div class="card-body">
           <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
+                  readonly
+                  id="password"
+                  placeholder="Your Secure Password"
+                  aria-label="Generated Password"
           ></textarea>
         </div>
-        <label for="amountNumberCharacters">Amount of Characters</label>
-      <div class="char-amount-characters">
-        <input type="range" min="8" max="128" value="8" id="rangeOfCharacters">
-        <input class="number-input" type="number" min="8" max="128" value="8" id="characterAmountNumber">
-        <div>
-          <input type="checkbox" id="addUppercase" name="addUpperCase"
-                 checked>
-          <label for="upperCase">Add Uppercase Letters?</label>
+        <label for="rangeOfCharacters">Amount of Characters</label>
+        <div class="char-amount-characters">
+            <input type="range" min="8" max="128" value="16" id="rangeOfCharacters"/>
+            <input class="number-input" type="number" min="8" max="128" value="16" id="characterAmountNumber"/>
+
+            <div>
+                <input type="checkbox" id="addUppercase" name="addUpperCase"
+                       checked/>
+                <label for="addUpperCase">Add Uppercase Letters?</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="addLowerCase" name="addLowerCase"
+                       checked>
+                <label for="addLowerCase">Add Lowercase Letters?</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="symbols" name="symbols">
+                <label for="symbols">Add Symbols?</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="numbers" name="numbers">
+                <label for="numbers">Add Numbers?</label>
+            </div>
+
+            <div class="card-footer">
+                <button id="generate" class="btn">Generate Password</button>
+                <button id="clipboard" class="btn" onclick="copiedToClipboard()">Copy to Clipboard</button>
+            </div>
         </div>
-        <div>
-          <input type="checkbox" id="symbols" name="symbols">
-          <label for="symbols">Add Symbols?</label>
-        </div>
-        <div>
-          <input type="checkbox" id="numbers" name="numbers">
-          <label for="numbers">Add Numbers?</label>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-          <button id="clipboard" class="btn" onclick="copiedToClipboard()">Copy to Clipboard</button>"
-        </div>
-        
-      </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+</div>
+<script src="passwordGen.js"></script>
+</body>
 </html>
